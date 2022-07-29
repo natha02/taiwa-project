@@ -1,0 +1,19 @@
+/*
+    j'ai utilisé display grid pour mieux gérer les blocs et les mettres côte à côte mais 
+    j'aurais pu aussi utilisé display flex
+*/
+.List-Users{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+/*
+    pour centrer facilement un block
+*/
+h3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

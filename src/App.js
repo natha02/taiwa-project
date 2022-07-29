@@ -3,8 +3,6 @@ import "./App.css";
 import User from "./components/user/User";
 
 const App = () => {
-
-
   /*
   utilisations du hook pour gérer les états de l'utilisateur du tableau
   qu'on a crée [users].
@@ -30,6 +28,8 @@ const App = () => {
 
 
 
+
+
   /*
   vérification de l'importation si on la liste des utilisateurs ou pas. 
   PS: dans la console bien sûr.
@@ -38,20 +38,23 @@ const App = () => {
   console.log(users);
 
 
-  
+
+
+
   /*
   on crée un nouveau tableau user avec map et on leur donne une valeur correspondante
-  ici on veut juste username , name , email.
+  ici on veut juste username , name , email mais j'ai rajouté id pour avoir le numéro
+   pendant mon affichage sur le titre de chaque utilisateur.
   */
   return (
     <div className="App">
       <h1>Taiwa Project Final Interview</h1>
 
       <div>
-        <h3>Users List</h3>
         {users.map((user) => (
           <User
             key={user.id}
+            id={user.id}
             name={user.name}
             username={user.username}
             email={user.email}
