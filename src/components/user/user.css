@@ -3,12 +3,14 @@
     j'aurais pu aussi utilisé display flex
 */
 
+/*style de user container*/
 .user{
     background-color: var(--primary-color);
     margin: 0;
     padding-bottom: 2rem;
 }
 
+/*style du titre*/
 .title{
     font-size: 3rem;
     text-transform: uppercase;
@@ -18,6 +20,10 @@
     margin: 0;
 }
 
+/*style du liste
+    j'ai utilisé grid pour mettre côte à côte les block
+    grid-template-columns : pour mettre les colonnes ,et choisir la taille de chaques colonnes et nombre de colonnes
+*/
 .List-Users{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -42,6 +48,10 @@
     color: var(--color-white);
 }
 
+
+/*container du button delete
+    que j'ai centré au milieu du block
+*/
 .buttonDelete{
     font-size: 1rem;
     display: flex;
@@ -49,12 +59,16 @@
     align-items: center;
 }
 
+/*style du button delete*/
 .buttonDelete button{
     background-color: var(--secondary-color);
     text-transform: uppercase;
     font-size: 1rem;
 }
 
+/*
+style du button deleter hover
+*/
 .buttonDelete button:hover{
     background-color: var(--color-white);
     color: var(--primary-color);

@@ -93,9 +93,7 @@ const App = () => {
   return (
     <>
       <Header />
-      <div className="add">
-        <AddUser fetchAdd={fetchAdd} />
-      </div>
+      <AddUser fetchAdd={fetchAdd} />
 
       <div className="user">
         <h3 className="title">Users List</h3>

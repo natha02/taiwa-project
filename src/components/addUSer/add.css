@@ -1,3 +1,7 @@
+/*
+    j'ai centrer le block avec flex 
+    et je l'ai donné une hauteur de 100vh pour remplir l'écran
+*/
 .add-user{
     min-height: 100vh;
     display: flex;
@@ -6,6 +10,10 @@
     background-color: var(--secondary-color);
 }
 
+/*
+style du titre ADD USER
+j'ai centré le text sur le centre avec text-align center
+*/
 .add-user h3{
     color: var(--color-white);
     padding-bottom: 2rem;
@@ -15,6 +23,12 @@
     text-align: center;
 }
 
+/*
+style du formulaire
+flex : pour mettre côte à côte en ligne les champs
+puis je centre le formulaire sur le centre avec justify-content center (horizontal)
+vertical alignement du formulaire sur le centre avec align-items center (vertical)
+*/
 form{
     display: flex;
     flex-direction: row;
@@ -29,6 +43,9 @@ form button{
     font-size: 1rem;
 }
 
+/*
+hover (quand la souris passe au dessus du boutton du coup ces paramètres sont appliqués)
+*/
 button:hover{
     background-color: var(--color-white);
     color: var(--primary-color);

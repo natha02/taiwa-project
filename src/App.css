@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+/*
+    création des variiables qui vont être toujours utilisées
+*/
 :root{
     --primary-color: #082032;
     --secondary-color: #ECB365;

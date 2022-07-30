@@ -1,3 +1,8 @@
+/*
+    j'ai choisi l'hauteur pour remplir l'écran (min-height pour que le block ne descend en dessous du valeur donné)
+    puis j'ai centré avec flex , justify-content et align-items.
+*/
+
 header{
     text-align: center;
     padding: 3rem;
