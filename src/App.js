@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import AddUser from "./components/addUSer/AddUser";
+import Header from "./components/header/Header";
 import User from "./components/user/User";
 
 const App = () => {
@@ -91,25 +92,29 @@ const App = () => {
   */
   return (
     <div className="App">
-      <h1>Taiwa Project Final Interview</h1>
+      <Header/>
 
-      <div className="add">
-        <AddUser fetchAdd={fetchAdd} />
-      </div>
+      <main>
+        <div className="add">
+          <AddUser fetchAdd={fetchAdd} />
+        </div>
 
-      <div className="user">
-        <h3>User List</h3>
-        {users.map((user) => (
-          <User
-            key={user.id}
-            id={user.id}
-            name={user.name}
-            username={user.username}
-            email={user.email}
-            fetchDelete={fetchDelete}
-          />
-        ))}
-      </div>
+        <div className="user">
+          <h3>User List</h3>
+          {users.map((user) => (
+            <User
+              key={user.id}
+              id={user.id}
+              name={user.name}
+              username={user.username}
+              email={user.email}
+              fetchDelete={fetchDelete}
+            />
+          ))}
+        </div>
+      </main>
+
+      <footer></footer>
     </div>
   );
 };

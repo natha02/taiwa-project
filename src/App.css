@@ -1,8 +1,15 @@
-.App{
-    width: 800px;
-    margin: 0 auto;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root{
+    --primary-color: #082032;
+    --secondary-color: #ECB365;
+    --color-white: #fff;
 }
 
-h1{
-    text-align: center;
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
+
+

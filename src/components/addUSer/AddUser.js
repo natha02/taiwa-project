@@ -1,6 +1,7 @@
 import React from "react";
 import "./add.css";
 
+
 const AddUser = ({ fetchAdd }) => {
   /*
     onSubmit vas ajouter les valuer qu'on séléctionne dans fetchAdd qu'on a préalablement construis dans app.js
@@ -27,13 +28,15 @@ const AddUser = ({ fetchAdd }) => {
   */
   return (
     <div className="add-user">
+      <div className="content">
       <h3>Add User</h3>
       <form onSubmit={onSubmitForm}>
         <input type="text" placeholder="Username" name="username" />
         <input type="text" placeholder="Name" name="name" />
         <input type="email" placeholder="Email" name="email" />
-        <button onSubmit={onSubmitForm}>Add User</button>
+        <button onSubmit={onSubmitForm}>ADD</button>
       </form>
+      </div>
     </div>
   );
 };

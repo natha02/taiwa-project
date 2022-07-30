@@ -1,0 +1,23 @@
+header{
+    text-align: center;
+    padding: 3rem;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--primary-color);
+}
+
+h1{
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    padding-bottom: 2rem;
+    font-size: 4rem;
+}
+
+p{
+    color: var(--color-white);
+    padding: 1rem;
+    font-size: 1rem;
+}
