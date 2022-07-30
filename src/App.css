@@ -12,4 +12,9 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
+input,button {
+    border: none;
+    width: 250px;
+    height: 50px;
+}
 

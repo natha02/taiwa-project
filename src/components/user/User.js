@@ -15,15 +15,21 @@ const User = ({ id, name, username, email, fetchDelete }) => {
   };
 
   return (
-    <div>
+    <div className="container">
       <div className="List-Users">
-        <h3>User {id}</h3>
-        <ul>
-          <li>{name}</li>
-          <li>{username}</li>
-          <li>{email}</li>
+        <ul className="titleId">
+          <li>User {id}</li>
         </ul>
-        <button onClick={userDelete}>Delete</button>
+        <div className="liste">
+          <ul>
+            <li>  <span className="text">Name : </span> --- {name}</li>
+            <li>  <span className="text">Username : </span> --- {username}</li>
+            <li>  <span className="text">Email : </span> --- {email}</li>
+          </ul>
+        </div>
+        <div className="buttonDelete">
+          <button onClick={userDelete}>Delete</button>
+        </div>
       </div>
     </div>
   );

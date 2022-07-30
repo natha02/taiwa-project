@@ -91,31 +91,26 @@ const App = () => {
    dans notre block user on a rajouter l'options delete qu'on à crée en haut pour delete un user
   */
   return (
-    <div className="App">
-      <Header/>
+    <>
+      <Header />
+      <div className="add">
+        <AddUser fetchAdd={fetchAdd} />
+      </div>
 
-      <main>
-        <div className="add">
-          <AddUser fetchAdd={fetchAdd} />
-        </div>
-
-        <div className="user">
-          <h3>User List</h3>
-          {users.map((user) => (
-            <User
-              key={user.id}
-              id={user.id}
-              name={user.name}
-              username={user.username}
-              email={user.email}
-              fetchDelete={fetchDelete}
-            />
-          ))}
-        </div>
-      </main>
-
-      <footer></footer>
-    </div>
+      <div className="user">
+        <h3 className="title">Users List</h3>
+        {users.map((user) => (
+          <User
+            key={user.id}
+            id={user.id}
+            name={user.name}
+            username={user.username}
+            email={user.email}
+            fetchDelete={fetchDelete}
+          />
+        ))}
+      </div>
+    </>
   );
 };
 

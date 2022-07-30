@@ -2,18 +2,61 @@
     j'ai utilisé display grid pour mieux gérer les blocs et les mettres côte à côte mais 
     j'aurais pu aussi utilisé display flex
 */
+
+.user{
+    background-color: var(--primary-color);
+    margin: 0;
+    padding-bottom: 2rem;
+}
+
+.title{
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    padding: 3rem 0;
+    text-align: center;
+    margin: 0;
+}
+
 .List-Users{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    margin: 1rem 0;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /*
-    pour centrer facilement un block
-*/
-h3{
+    pour centrer facilement un block avec flex
+*/ 
+.titleId{
+    text-transform: uppercase;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0;
+    color: var(--color-white);
+}
+
+.liste{
+    color: var(--color-white);
+}
+
+.buttonDelete{
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonDelete button{
+    background-color: var(--secondary-color);
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.buttonDelete button:hover{
+    background-color: var(--color-white);
+    color: var(--primary-color);
+    border: 2px solid var(--secondary-color);
 }
