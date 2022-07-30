@@ -15,6 +15,7 @@ const App = () => {
 
 
 
+  /*** IMPORTATION ***/ 
   /*
   importation de l'api jsonplaceholder directement avec users vu que
   le nombre par défaut c'est 10 users.
@@ -30,12 +31,14 @@ const App = () => {
 
 
 
-
+  /*** AJOUT USER ***/
   /*
   Ajout des utilisateur à l'aide d'un formulaire et méthode post en utilisant Fetch.
   càd on vas pouvoir réecrire le fichier JSONPlaceholder en ajoutant un nouvel utilisateur par exemple.
 
   ...users est une syntaxe pour copier un tableau. (syntaxe spread)
+  stringify est une syntaxe pour convertir un objet en une chaine de caractère , ici les valeurs qu'on vas convertir
+  c'est username, name, email.
   */
   const fetchAdd = async (username, name, email) => {
     await fetch("https://jsonplaceholder.typicode.com/users", {
@@ -45,9 +48,27 @@ const App = () => {
         name: name,
         email: email,
       }),
-      headers: {"content-type": "application/json; charset=UTF-8"},
-    }).then((response) => response.json())
+      headers: { "content-type": "application/json; charset=UTF-8" },
+    })
+      .then((response) => response.json())
       .then((json) => setUsers([...users, json]));
+  };
+
+
+
+  /*** DELETE USER ***/
+  /*
+    on vas maintenant passer au delete des utilisateurs.
+    utilisation de fetch toujours pour l'api jsonplaceholder.
+    on vas utiliser la méthode delete pour supprimer un utilisateur, et id pour identifier quel utilisateur et à supprimer.
+    vu que chaque utilisateur n'a qu'une seule id et rien qu'une seule.
+  */
+  const fetchDelete = async (id) => {
+    await fetch(`https://jsonplaceholder.typicode.com/users/${id}`, {
+      method: "DELETE",
+    })
+      .then((response) => response.json())
+      .then((json) => setUsers(users.filter((user) => user.id !== id)));
   };
 
 
@@ -63,24 +84,23 @@ const App = () => {
 
 
 
-
   /*
   on crée un nouveau tableau user avec map et on leur donne une valeur correspondante
   ici on veut juste username , name , email mais j'ai rajouté id pour avoir le numéro
    pendant mon affichage sur le titre de chaque utilisateur.
+
+   dans notre block user on a rajouter l'options delete qu'on à crée en haut pour delete un user
   */
   return (
     <div className="App">
       <h1>Taiwa Project Final Interview</h1>
 
-
       <div className="add">
         <AddUser fetchAdd={fetchAdd} />
       </div>
-      
 
-      <div>
-      <h3>User List</h3>
+      <div className="user">
+        <h3>User List</h3>
         {users.map((user) => (
           <User
             key={user.id}
@@ -88,11 +108,10 @@ const App = () => {
             name={user.name}
             username={user.username}
             email={user.email}
+            fetchDelete={fetchDelete}
           />
         ))}
       </div>
-
-
     </div>
   );
 };

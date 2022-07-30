@@ -6,8 +6,14 @@ import "./user.css";
     on donne a User comme paramètre lea valeurs et on le met dans une balise liste pour l'afficher en mode 
     liste à puce en retour.
     J'ai rajouter un boutton pour supprimer un utilisateur.
+    et aussi userDelete pour supprimer un utilisateur sur onClick quand fetchDelete 
+    vas récupérer l'id de l'utilisateur à supprimer.
 */
-const User = ({ id, name, username, email }) => {
+const User = ({ id, name, username, email, fetchDelete }) => {
+  const userDelete = () => {
+    fetchDelete(id);
+  };
+
   return (
     <div>
       <div className="List-Users">
@@ -17,7 +23,7 @@ const User = ({ id, name, username, email }) => {
           <li>{username}</li>
           <li>{email}</li>
         </ul>
-        <button>Delete</button>
+        <button onClick={userDelete}>Delete</button>
       </div>
     </div>
   );
