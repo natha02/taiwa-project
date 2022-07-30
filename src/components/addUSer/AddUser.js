@@ -1,4 +1,5 @@
 import React from "react";
+import "./add.css";
 
 const AddUser = ({ fetchAdd }) => {
   /*
@@ -25,9 +26,9 @@ const AddUser = ({ fetchAdd }) => {
     et mettre notre onSubmit sur onSubmitForm qu'on a crée on haut pour l'ajout et la réinitialisation.
   */
   return (
-    <div>
+    <div className="add-user">
+      <h3>Add User</h3>
       <form onSubmit={onSubmitForm}>
-        <h3>Add User</h3>
         <input type="text" placeholder="Username" name="username" />
         <input type="text" placeholder="Name" name="name" />
         <input type="email" placeholder="Email" name="email" />

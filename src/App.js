@@ -25,8 +25,6 @@ const App = () => {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((response) => response.json())
       .then((json) => setUsers(json))
-      //Gestion d'erreur si la promise n'est pas réalisée, la console affichera error.
-      .catch((error) => console.log(error));
   };
 
 
