@@ -1,0 +1,20 @@
+nav {
+  position: fixed;
+  top: 1%;
+  left: 1%;
+}
+
+.icon {
+  font-size: 2rem;
+  background-color: var(--color-white);
+  width: 30px;
+  border-radius: 10px;
+  padding: 0.5rem;
+  margin: 1rem;
+  transition: ease-in-out 0.2s;
+}
+
+.icon:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}

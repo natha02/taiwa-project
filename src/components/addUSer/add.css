@@ -41,6 +41,7 @@ form button{
     background-color: var(--primary-color);
     color: var(--color-white);
     font-size: 1rem;
+    transition: ease-in-out 0.2s;
 }
 
 /*
