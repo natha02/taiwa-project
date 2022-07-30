@@ -7,16 +7,18 @@ import "./user.css";
     liste à puce en retour.
     J'ai rajouter un boutton pour supprimer un utilisateur.
 */
-const User = ({ id , name, username, email }) => {
+const User = ({ id, name, username, email }) => {
   return (
-    <div className="List-Users">  
-      <h3>User {id}</h3>
-      <ul>
+    <div>
+      <div className="List-Users">
+        <h3>User {id}</h3>
+        <ul>
           <li>{name}</li>
           <li>{username}</li>
           <li>{email}</li>
-      </ul>
-      <button>Delete</button>
+        </ul>
+        <button>Delete</button>
+      </div>
     </div>
   );
 };

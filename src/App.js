@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
+import AddUser from "./components/addUSer/AddUser";
 import User from "./components/user/User";
 
 const App = () => {
   /*
-  utilisations du hook pour gérer les états de l'utilisateur du tableau
+  utilisations des hooks useState & useEffect pour gérer les états de l'utilisateur du tableau
   qu'on a crée [users].
   */
   const [users, setUsers] = useState([]);
@@ -19,6 +20,7 @@ const App = () => {
   le nombre par défaut c'est 10 users.
   */
   const fetchJson = async () => {
+    //C'est un Get request qui va récupérer les données de l'api
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((response) => response.json())
       .then((json) => setUsers(json))
@@ -26,6 +28,27 @@ const App = () => {
       .catch((error) => console.log(error));
   };
 
+
+
+
+  /*
+  Ajout des utilisateur à l'aide d'un formulaire et méthode post en utilisant Fetch.
+  càd on vas pouvoir réecrire le fichier JSONPlaceholder en ajoutant un nouvel utilisateur par exemple.
+
+  ...users est une syntaxe pour copier un tableau. (syntaxe spread)
+  */
+  const fetchAdd = async (username, name, email) => {
+    await fetch("https://jsonplaceholder.typicode.com/users", {
+      method: "POST",
+      body: JSON.stringify({
+        username: username,
+        name: name,
+        email: email,
+      }),
+      headers: {"content-type": "application/json; charset=UTF-8"},
+    }).then((response) => response.json())
+      .then((json) => setUsers([...users, json]));
+  };
 
 
 
@@ -50,7 +73,14 @@ const App = () => {
     <div className="App">
       <h1>Taiwa Project Final Interview</h1>
 
+
+      <div className="add">
+        <AddUser fetchAdd={fetchAdd} />
+      </div>
+      
+
       <div>
+      <h3>User List</h3>
         {users.map((user) => (
           <User
             key={user.id}
@@ -61,6 +91,8 @@ const App = () => {
           />
         ))}
       </div>
+
+
     </div>
   );
 };
