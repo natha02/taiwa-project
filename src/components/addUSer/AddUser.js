@@ -27,7 +27,7 @@ const AddUser = ({ fetchAdd }) => {
     et mettre notre onSubmit sur onSubmitForm qu'on a crée on haut pour l'ajout et la réinitialisation.
   */
   return (
-    <div className="add-user">
+    <div className="add-user" id="add-user">
       <div className="content">
       <h3>Add User</h3>
       <form onSubmit={onSubmitForm}>

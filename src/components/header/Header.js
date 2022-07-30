@@ -3,7 +3,8 @@ import "./header.css";
 
 const Header = () => {
   return (
-    <header>
+    <>
+    <header id="header">
       <h1>Taiwa Final Project Interview</h1>
       <p>
         Bienvenu sur le project taiwa React/JSONPlaceholder,
@@ -17,6 +18,7 @@ const Header = () => {
         l'adresse) avec un peu de CSS Responsive.
       </p>
     </header>
+    </>
   );
 };
 

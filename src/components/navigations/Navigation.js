@@ -2,8 +2,16 @@ import React from 'react'
 
 const Navigation = () => {
   return (
-    <div>Navigation</div>
+    <>
+        <nav>
+            <ul>
+                <li><a href='#header'>Home</a></li>
+                <li><a href='#add-user'>Add User</a></li>
+                <li><a href='#list-user'>List User</a></li>
+            </ul>
+        </nav>
+    </>
   )
 }
 
-export default Navigation
+export default Navigation;

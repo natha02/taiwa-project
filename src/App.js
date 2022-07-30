@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import AddUser from "./components/addUSer/AddUser";
 import Header from "./components/header/Header";
+import Navigation from "./components/navigations/Navigation";
 import User from "./components/user/User";
 
 const App = () => {
@@ -92,10 +93,11 @@ const App = () => {
   */
   return (
     <>
-      <Header />
-      <AddUser fetchAdd={fetchAdd} />
+      <Navigation/>
+      <Header/>
+      <AddUser fetchAdd={fetchAdd}/>
 
-      <div className="user">
+      <div id="list-user" className="user">
         <h3 className="title">Users List</h3>
         {users.map((user) => (
           <User
