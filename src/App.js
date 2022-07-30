@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import AddUser from "./components/addUSer/AddUser";
+import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 import Navigation from "./components/navigations/Navigation";
 import User from "./components/user/User";
@@ -110,6 +111,7 @@ const App = () => {
           />
         ))}
       </div>
+      <Footer/>
     </>
   );
 };

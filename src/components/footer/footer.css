@@ -1,0 +1,26 @@
+footer{
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.social-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.icon-footer{
+    font-size: 1.5rem;
+    transition: ease-in-out .3s;
+}
+
+.icon-footer:hover{
+    cursor: pointer;
+    color: var(--primary-color);
+}
