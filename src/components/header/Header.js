@@ -7,8 +7,8 @@ const Header = () => {
     <header id="header">
       <h1>Taiwa Final Project Interview</h1>
       <p>
-        Bienvenu sur le project taiwa React/JSONPlaceholder,
-        je vous laisse vous amusez à supprimer et ajouter des utilisateurs.
+        Bienvenu sur le projet taiwa React/JSONPlaceholder,
+        je vous laisse vous amuser à supprimer et ajouter des utilisateurs.
       </p>
 
       <p>

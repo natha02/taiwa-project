@@ -13,10 +13,10 @@ const Footer = () => {
           </div>
 
           <div className="social-footer">
-            <a href="#">
+            <a href="https://www.linkedin.com/in/andrilalaina-kalaha/">
               <FontAwesomeIcon icon={faLinkedin} color="#FFF" className="icon-footer"/>
             </a>
-            <a href="#">
+            <a href="https://github.com/natha02">
               <FontAwesomeIcon icon={faGithub} color="#FFF" className="icon-footer"/>
             </a>
           </div>
