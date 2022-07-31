@@ -18,3 +18,42 @@ nav {
   background-color: var(--color-primary);
   color: var(--color-white);
 }
+
+
+/********************************************************/
+/*======================RESPONSIVE PHONE================*/
+/********************************************************/
+/*les paramètres vont s'appliquer au écran max 600px*/
+@media screen and (max-width: 600px) {
+  nav{
+    left: 50%;
+    top: auto;
+    bottom: 0%;
+    transform: translateX(-50%);
+  }
+  .nav-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/********************************************************/
+/*======================RESPONSIVE IPAD,TABLETTE,....================*/
+/********************************************************/
+/*les paramètres vont s'appliquer au écran max 1024px*/
+@media screen and (max-width: 1024px) {
+  nav{
+    left: 50%;
+    top: auto;
+    bottom: 0%;
+    transform: translateX(-50%);
+  }
+  .nav-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+}

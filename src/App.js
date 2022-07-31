@@ -90,7 +90,7 @@ const App = () => {
   ici on veut juste username , name , email mais j'ai rajouté id pour avoir le numéro
    pendant mon affichage sur le titre de chaque utilisateur.
 
-   dans notre block user on a rajouter l'options delete qu'on à crée en haut pour delete un user
+   dans notre user on a rajouter l'options delete qu'on à crée en haut pour delete un user
   */
   return (
     <>

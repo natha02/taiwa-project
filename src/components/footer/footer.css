@@ -24,3 +24,13 @@ footer{
     cursor: pointer;
     color: var(--primary-color);
 }
+
+/********************************************************/
+/*======================RESPONSIVE================*/
+/********************************************************/
+/*les paramètres vont s'appliquer au écran max 1024px*/
+@media screen and (max-width: 1024px) {
+    footer{
+        padding-bottom: 3rem;
+    }
+}

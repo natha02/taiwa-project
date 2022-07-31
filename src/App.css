@@ -15,9 +15,10 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
-input,button {
+button {
     border: none;
     width: 250px;
     height: 50px;
 }
+
 

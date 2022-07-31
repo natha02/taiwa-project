@@ -27,7 +27,7 @@
 .List-Users{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    gap: 2rem;
     padding: 1rem 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -68,10 +68,32 @@
 }
 
 /*
-style du button deleter hover
+style du button delete hover
 */
 .buttonDelete button:hover{
     background-color: var(--color-white);
     color: var(--primary-color);
     border: 2px solid var(--secondary-color);
+}
+
+
+/********************************************************/
+/*======================RESPONSIVE PHONE================*/
+/********************************************************/
+/*les paramètres vont s'appliquer au écran max 600px*/
+@media screen and (max-width: 600px) {
+    .List-Users{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/********************************************************/
+/*======================RESPONSIVE IPAD,TABLETTE,....================*/
+/********************************************************/
+/*les paramètres vont s'appliquer au écran max 1024px*/
+@media screen and (max-width: 1024px) {
+    .List-Users{
+        padding: 1rem;
+    }
 }
