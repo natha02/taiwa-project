@@ -8,12 +8,12 @@ import User from "./components/user/User";
 
 const App = () => {
   /*
-  utilisations des hooks useState & useEffect pour gérer les états de l'utilisateur du tableau
-  qu'on a crée [users].
+  utilisations des hooks useState & useEffect pour gérer les états de l'utilisateur
+  qu'on a crée [users]. (variables d'état)
   */
-  const [users, setUsers] = useState([]);
-  useEffect(() => {
-    fetchJson();
+  const [users, setUsers] = useState([]); //(équivalent de this.state, état initial)
+  useEffect(() => { //indique qu'on doit exécuter fetchJson() à chaque affichage (charger des donnée distant qu'on récupérer)
+    fetchJson(); 
   }, []);
 
 
@@ -34,12 +34,13 @@ const App = () => {
 
   /*** AJOUT USER ***/
   /*
-  Ajout des utilisateur à l'aide d'un formulaire et méthode post en utilisant Fetch.
+  Ajout des utilisateur à l'aide d'un formulaire et méthode post. (post est conseiller pour les formulaires)
   càd on vas pouvoir réecrire le fichier JSONPlaceholder en ajoutant un nouvel utilisateur par exemple.
 
   ...users est une syntaxe pour copier un tableau. (syntaxe spread)
   stringify est une syntaxe pour convertir un objet en une chaine de caractère , ici les valeurs qu'on vas convertir
   c'est username, name, email.
+  await : doit être avec async, le but c'est d'attendre que la promise soit résolu sinon erreur ou exception.
   */
   const fetchAdd = async (username, name, email) => {
     await fetch("https://jsonplaceholder.typicode.com/users", {
@@ -60,7 +61,7 @@ const App = () => {
   /*** DELETE USER ***/
   /*
     on vas maintenant passer au delete des utilisateurs.
-    utilisation de fetch toujours pour l'api jsonplaceholder.
+    on récupère notre jsonplaceholder mais cette fois-ci juste le id.
     on vas utiliser la méthode delete pour supprimer un utilisateur, et id pour identifier quel utilisateur et à supprimer.
     vu que chaque utilisateur n'a qu'une seule id et rien qu'une seule.
   */

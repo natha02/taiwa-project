@@ -4,9 +4,11 @@ import "./add.css";
 
 const AddUser = ({ fetchAdd }) => {
   /*
-    onSubmit vas ajouter les valuer qu'on séléctionne dans fetchAdd qu'on a préalablement construis dans app.js
+    onSubmit vas ajouter les valuer qu'on séléctionne dans fetchAdd qu'on a préalablement construis
     et vas reinitilialiser le formulaire.
-    du coup on peut ajouter un nouvel utilisateur.
+    du coup on peut ajouter un utilisateur.
+
+    on récupère un par un les valeur des paramètres et fetchAdd prend comme paramètres ces valeurs
   */
   const onSubmitForm = (e) => {
     e.preventDefault();
