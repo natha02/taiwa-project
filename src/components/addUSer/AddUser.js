@@ -10,7 +10,7 @@ const AddUser = ({ fetchAdd }) => {
 
     importation de la clé pour l'utilisation de alan ai et pour identification de mes réglages aussi. (connexion)
   */
-  const Alan_key = `083ae6733331e0dc685b73ec325a5d342e956eca572e1d8b807a3e2338fdd0dc/stage`;
+ 
   const [username, setUsername] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -94,6 +94,7 @@ const AddUser = ({ fetchAdd }) => {
             name="username"
             onChange={(e) => setUsername(e.target.value)}
             value={username}
+            required
           />
 
           <input
@@ -102,6 +103,7 @@ const AddUser = ({ fetchAdd }) => {
             name="name"
             onChange={(e) => setName(e.target.value)}
             value={name}
+            required
           />
 
           <input
@@ -110,6 +112,7 @@ const AddUser = ({ fetchAdd }) => {
             name="email"
             onChange={(e) => setEmail(e.target.value)}
             value={email}
+            required
           />
 
           <button onSubmit={onSubmitForm}>ADD</button>

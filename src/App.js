@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
+import { BrowserRouter as Router, Routes, Route, Redirect, Switch } from "react-router-dom";
+
 import AddUser from "./components/addUSer/AddUser";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
@@ -123,31 +125,32 @@ useEffect(() => {
             speedMultiplier={1}
           />
         </div>
-      )
-      
-      : 
-      
-      
-      (
-        <div>
-          <Navigation />
-          <Header />
-          <AddUser fetchAdd={fetchAdd} />
-          <div id="list-user" className="user">
-            <h3 className="title">Users List</h3>
-            {users.map((user) => (
-              <User
-                key={user.id}
-                id={user.id}
-                name={user.name}
-                username={user.username}
-                email={user.email}
-                fetchDelete={fetchDelete}
-              />
-            ))}
-          </div>
-          <Footer />
-        </div>
+      ) : (
+        <Router>
+          <Routes>
+            <Route path="/" element={<Header />}/>
+            <Route path="/AddUser" element={<AddUser fetchAdd={fetchAdd}/>}/>
+            
+            <Route path="/users" 
+              element={<div id="list-user" className="user">
+              <h3 className="title">Users List</h3>
+              {users.map((user) => (
+                <User
+                  key={user.id}
+                  id={user.id}
+                  name={user.name}
+                  username={user.username}
+                  email={user.email}
+                  fetchDelete={fetchDelete}
+                />
+              ))}
+            </div>}
+            >
+              
+            </Route>
+          </Routes>
+            <Footer />
+        </Router>
       )}
     </>
   );
