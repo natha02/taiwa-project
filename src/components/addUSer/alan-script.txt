@@ -1,0 +1,35 @@
+intent('My name is $(NAME)', (p) => {
+    if(p.NAME.value){
+        p.play({ 
+            command: 'name', 
+            data: p.NAME.value
+        });
+    }
+    else{
+        p.play(`Cannot read the name`);
+    }
+})
+
+intent('My username is $(USERNAME)', (p) => {
+    if(p.USERNAME.value){
+        p.play({ 
+            command: 'username', 
+            data: p.USERNAME.value
+        });
+    }
+    else{
+        p.play(`Cannot read the username`);
+    }
+})
+
+intent('My email is $(EMAIL)', (p) => {
+    if(p.EMAIL.value){
+        p.play({ 
+            command: 'email', 
+            data: p.EMAIL.value
+        });
+    }
+    else{
+        p.play(`Cannot read the email`);
+    }
+})

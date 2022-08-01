@@ -16,11 +16,26 @@ j'ai centré le text sur le centre avec text-align center
 */
 .add-user h3{
     color: var(--color-white);
-    padding-bottom: 2rem;
     text-transform: uppercase;
     font-size: 3rem;
     color: var(--primary-color);
     text-align: center;
+}
+
+.add-user p{
+    text-align: center;
+    font-size: 1rem;
+    padding-bottom: 2rem;
+}
+
+h5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-top: 0;
+    padding: 0;
 }
 
 /*
