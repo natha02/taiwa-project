@@ -5,6 +5,7 @@ import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 import Navigation from "./components/navigations/Navigation";
 import User from "./components/user/User";
+import PacmanLoader  from "react-spinners/PacmanLoader";
 
 const App = () => {
   /*
@@ -85,6 +86,21 @@ const App = () => {
 
 
 
+/*
+Création d'un loader de page avec react-spinners.
+j'ai importé react-spinners avant. 
+mis en place des état pour le loader
+*/
+const [loading, setLoading] = useState(true);
+
+useEffect(() => {
+  setLoading(true)
+  setTimeout(()  => {
+    setLoading(false)
+  }, 2000)
+  }, []);
+
+
 
   /*
   on crée un nouveau tableau user avec map et on leur donne une valeur correspondante
@@ -92,27 +108,47 @@ const App = () => {
    pendant mon affichage sur le titre de chaque utilisateur.
 
    dans notre user on a rajouter l'options delete qu'on à crée en haut pour delete un user
+
+
+   pour le loader page on a fait une condition (ternaire) pour afficher le loader avant le reste de la page.
   */
   return (
     <>
-      <Navigation/>
-      <Header/>
-      <AddUser fetchAdd={fetchAdd}/>
-
-      <div id="list-user" className="user">
-        <h3 className="title">Users List</h3>
-        {users.map((user) => (
-          <User
-            key={user.id}
-            id={user.id}
-            name={user.name}
-            username={user.username}
-            email={user.email}
-            fetchDelete={fetchDelete}
+      {loading ? (
+        <div id="pacman">
+          <PacmanLoader
+            size={30}
+            color={"#ECB365"}
+            loading={loading}
+            speedMultiplier={1}
           />
-        ))}
-      </div>
-      <Footer/>
+        </div>
+      )
+      
+      : 
+      
+      
+      (
+        <div>
+          <Navigation />
+          <Header />
+          <AddUser fetchAdd={fetchAdd} />
+          <div id="list-user" className="user">
+            <h3 className="title">Users List</h3>
+            {users.map((user) => (
+              <User
+                key={user.id}
+                id={user.id}
+                name={user.name}
+                username={user.username}
+                email={user.email}
+                fetchDelete={fetchDelete}
+              />
+            ))}
+          </div>
+          <Footer />
+        </div>
+      )}
     </>
   );
 };
