@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/taiwa-project/static/css/main.0a4d0cc1.css",
-    "main.js": "/taiwa-project/static/js/main.4ef13a61.js",
+    "main.css": "/taiwa-project/static/css/main.f4ac69eb.css",
+    "main.js": "/taiwa-project/static/js/main.cb2044bb.js",
     "static/js/787.22974a01.chunk.js": "/taiwa-project/static/js/787.22974a01.chunk.js",
     "index.html": "/taiwa-project/index.html",
-    "main.0a4d0cc1.css.map": "/taiwa-project/static/css/main.0a4d0cc1.css.map",
-    "main.4ef13a61.js.map": "/taiwa-project/static/js/main.4ef13a61.js.map",
+    "main.f4ac69eb.css.map": "/taiwa-project/static/css/main.f4ac69eb.css.map",
+    "main.cb2044bb.js.map": "/taiwa-project/static/js/main.cb2044bb.js.map",
     "787.22974a01.chunk.js.map": "/taiwa-project/static/js/787.22974a01.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0a4d0cc1.css",
-    "static/js/main.4ef13a61.js"
+    "static/css/main.f4ac69eb.css",
+    "static/js/main.cb2044bb.js"
   ]
 }
