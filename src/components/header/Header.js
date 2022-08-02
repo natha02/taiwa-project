@@ -4,6 +4,7 @@ import "./header.css";
 const Header = () => {
   return (
     <>
+    <section>
     <header id="header">
       <h1>Taiwa Final Project Interview</h1>
       <p>
@@ -19,6 +20,7 @@ const Header = () => {
         l'adresse) avec un peu de CSS Responsive.
       </p>
     </header>
+    </section>
     </>
   );
 };

@@ -7,6 +7,7 @@ import { faBagShopping } from "@fortawesome/free-solid-svg-icons";
 const Footer = () => {
   return (
     <>
+    <section>
       <footer>
         <div className="container-footer">
           <div className="text-footer">
@@ -30,6 +31,7 @@ const Footer = () => {
           </div>
         </div>
       </footer>
+      </section>
     </>
   );
 };

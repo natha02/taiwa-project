@@ -25,6 +25,7 @@
     grid-template-columns : pour mettre les colonnes ,et choisir la taille de chaques colonnes et nombre de colonnes
 */
 .List-Users{
+    font-family: 'Poppins', sans-serif;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;

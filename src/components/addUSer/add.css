@@ -3,6 +3,7 @@
     et je l'ai donné une hauteur de 100vh pour remplir l'écran
 */
 .add-user{
+    font-family: 'Poppins', sans-serif;
     min-height: 100vh;
     display: flex;
     justify-content: center;

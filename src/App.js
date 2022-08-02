@@ -115,7 +115,7 @@ useEffect(() => {
    pour le loader page on a fait une condition (ternaire) pour afficher le loader avant le reste de la page.
   */
   return (
-    <>
+    <div className="app">
       {loading ? (
         <div id="pacman">
           <PacmanLoader
@@ -133,7 +133,7 @@ useEffect(() => {
             <Route path="*" element={<Navigate to ="/" />}/>
           </Routes>
           <AddUser fetchAdd={fetchAdd}/>
-          <div id="list-user" className="user">
+          <section id="list-user" className="user">
               <h3 className="title">Users List</h3>
               {users.map((user) => (
                 <User
@@ -145,11 +145,11 @@ useEffect(() => {
                   fetchDelete={fetchDelete}
                 />
               ))}
-            </div>
+            </section>
           <Footer />
         </Router>
       )}
-    </>
+    </div>
   );
 };
 
