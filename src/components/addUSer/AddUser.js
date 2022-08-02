@@ -3,6 +3,9 @@ import "./add.css";
 import { useEffect, useState } from "react";
 import alanBtn from "@alan-ai/alan-sdk-web"; //c'est pour le boutton de alan (micro en bas a droite)
 import Typewriter from "typewriter-effect";
+import { motion } from "framer-motion"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMouse } from "@fortawesome/free-solid-svg-icons";
 
 const AddUser = ({ fetchAdd }) => {
   /*
@@ -64,28 +67,43 @@ const AddUser = ({ fetchAdd }) => {
     <section className="add-user" id="add-user">
       <div className="content">
         <h3>Add User</h3>
-        <p>
-          Notre ami "Alan ai" peut nous aider à remplir le formulaire à l'aide
-          du vocal. Il suffit de cliquer sur boutton "micro en bas à droite".
-          <br />
-          Il suffit de lui dire les mots magiques suivante:
-          <br />
-        </p>
 
-        <h5>
-          <Typewriter
-            options={{
-              autoStart: true,
-              loop: true,
-              delay: 40,
-              strings: [
-                "My name is ... 🎤🎙️",
-                "My Username is ... 🎤🎙️",
-                "My Email is ... 🎤🎙️"
-              ],
-            }}
-          />
-        </h5>
+
+        <div className="instructions-container">
+          <motion.div 
+            whileHover={{ scale: 1.2, rotate: 90 }}
+            whileTap={{
+              scale: 0.8,
+              rotate: -90,
+              borderRadius: "100%"}}
+              
+            className="instructions">
+            <p>
+              <span className="text-rouge">Bouger Moi avec la souris!!! <FontAwesomeIcon icon={faMouse}/></span><br/>
+              Notre ami "Alan ai" peut nous aider à remplir le formulaire à
+              l'aide du vocal. Il suffit de cliquer sur boutton "micro en bas à
+              droite".
+              <br />
+              Il suffit de lui dire les mots magiques suivante:
+              <br />
+            </p>
+
+            <h5>
+              <Typewriter
+                options={{
+                  autoStart: true,
+                  loop: true,
+                  delay: 40,
+                  strings: [
+                    "My name is ... 🎤🎙️",
+                    "My Username is ... 🎤🎙️",
+                    "My Email is ... 🎤🎙️",
+                  ],
+                }}
+              />
+            </h5>
+          </motion.div>
+        </div>
 
         <form onSubmit={onSubmitForm}>
           <input
@@ -115,7 +133,7 @@ const AddUser = ({ fetchAdd }) => {
             required
           />
 
-          <button onSubmit={onSubmitForm}>ADD</button>
+          <button onSubmit={onSubmitForm} className="add-button">ADD</button>
         </form>
       </div>
     </section>
