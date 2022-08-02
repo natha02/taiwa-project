@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
+
 import AddUser from "./components/addUSer/AddUser";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
@@ -104,6 +105,7 @@ useEffect(() => {
 
 
 
+
   /*
   on crée un nouveau tableau user avec map et on leur donne une valeur correspondante
   ici on veut juste username , name , email mais j'ai rajouté id pour avoir le numéro
@@ -126,6 +128,7 @@ useEffect(() => {
           />
         </div>
       ) : (
+        
         <Router>
           <Navigation/>
           <Routes>
