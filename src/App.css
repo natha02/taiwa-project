@@ -9,11 +9,14 @@
     --color-white: #fff;
 }
 
+
+html{
+    scroll-behavior: smooth;
+}
 body{
     background-color: var(--primary-color);
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
 }
 
 button {

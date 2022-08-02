@@ -22,9 +22,9 @@ const User = ({ id, name, username, email, fetchDelete }) => {
         </ul>
         <div className="liste">
           <ul>
-            <li>  <span className="text">Name : </span> --- {name}</li>
-            <li>  <span className="text">Username : </span> --- {username}</li>
-            <li>  <span className="text">Email : </span> --- {email}</li>
+            <li>  <span className="text">Name : </span>  {name}</li>
+            <li>  <span className="text">Username : </span>  {username}</li>
+            <li>  <span className="text">Email : </span>  {email}</li>
           </ul>
         </div>
         <div className="buttonDelete">

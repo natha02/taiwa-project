@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route, Redirect, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
 import AddUser from "./components/addUSer/AddUser";
 import Footer from "./components/footer/Footer";
@@ -127,12 +127,13 @@ useEffect(() => {
         </div>
       ) : (
         <Router>
+          <Navigation/>
           <Routes>
             <Route path="/" element={<Header />}/>
-            <Route path="/AddUser" element={<AddUser fetchAdd={fetchAdd}/>}/>
-            
-            <Route path="/users" 
-              element={<div id="list-user" className="user">
+            <Route path="*" element={<Navigate to ="/" />}/>
+          </Routes>
+          <AddUser fetchAdd={fetchAdd}/>
+          <div id="list-user" className="user">
               <h3 className="title">Users List</h3>
               {users.map((user) => (
                 <User
@@ -144,12 +145,8 @@ useEffect(() => {
                   fetchDelete={fetchDelete}
                 />
               ))}
-            </div>}
-            >
-              
-            </Route>
-          </Routes>
-            <Footer />
+            </div>
+          <Footer />
         </Router>
       )}
     </>

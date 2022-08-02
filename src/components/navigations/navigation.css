@@ -1,59 +1,67 @@
-nav {
+/*
+  ici on a séléctionné le container de la navigation (navigation)
+  puis on l'as mis en position fixed pour qu'on l'a partout
+  left, top, transform pour la centrer au centre
+  height, width pour gérer la taille
+  flex pour centrer les contenus au centre avec align items (verticalement) justify (horizontalement)  
+*/
+
+.navigation{
   position: fixed;
+  left: 50%;
   top: 1%;
-  left: 1%;
-}
-
-.icon {
-  font-size: 2rem;
+  transform: translateX(-50%);
+  height: 60px;
+  line-height: 60px;
+  width: 300px;
   background-color: var(--color-white);
-  width: 30px;
-  border-radius: 10px;
-  padding: 0.5rem;
-  margin: 1rem;
-  transition: ease-in-out 0.2s;
-}
-
-.icon:hover {
-  background-color: var(--color-primary);
-  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
 }
 
 
-/********************************************************/
-/*======================RESPONSIVE PHONE================*/
-/********************************************************/
-/*les paramètres vont s'appliquer au écran max 600px*/
-@media screen and (max-width: 600px) {
-  nav{
-    left: 50%;
-    top: auto;
-    bottom: 0%;
-    transform: translateX(-50%);
-  }
-  .nav-content{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
+
+/*Pour mettre les contenus côte à côte et mettre des espacement*/
+.navigation-content{
+  display: flex;
+  gap: 3rem;
 }
 
-/********************************************************/
-/*======================RESPONSIVE IPAD,TABLETTE,....================*/
-/********************************************************/
-/*les paramètres vont s'appliquer au écran max 1024px*/
-@media screen and (max-width: 1024px) {
-  nav{
-    left: 50%;
-    top: auto;
-    bottom: 0%;
-    transform: translateX(-50%);
-  }
-  .nav-content{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
+
+
+/*modifier la taille, couleur, mettre de la transition, et des espacement*/
+.icone{
+  padding: 0 1rem;
+  font-size: 2rem;
+  color: #252525;
+  transition: 0.5s ease;
+  display: inline-block;
+}
+
+
+
+/*le style des icones quand on scroll vers le bas*/
+.icone-scroll{
+  padding: 0 1rem;
+  transition: 0.5s ease;
+  color: #252525;
+  font-size: 1.5rem;
+}
+
+
+
+/*style, quand on hover avec la souris l'icone, le style vas changer comme je l'ai demander de faire*/
+.icone-scroll:hover{
+  transition: 0.5s ease;
+
+  color: var(--secondary-color);
+}
+
+
+
+.icone:hover{
+  transition: 0.5s ease;
+  color: var(--secondary-color);
 }
