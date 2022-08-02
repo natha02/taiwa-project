@@ -15,18 +15,52 @@ header{
     background-color: var(--primary-color);
 }
 
-h1{
-    color: var(--secondary-color);
+.animated-paragraph{
+    color: rgba(236, 179, 101, 0.6);
     text-transform: uppercase;
-    padding-bottom: 2rem;
+    padding-bottom: 3rem;
     font-size: 4rem;
+    text-shadow: 2px 8px 6px rgba(0,0,0,0.2),
+                 0px -5px 35px rgba(255,255,255,0.3);
 }
 
 p{
-    color: var(--color-white);
+    color: white;
     padding: 1rem;
     font-size: 1rem;
 }
+
+.aside-container{
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+}
+
+
+/*
+mettre de l'ombre sur notre aside 
+puis arrondir les coins avec radius
+*/
+.aside-content{
+    box-shadow: rgba(255, 255, 255, 0.4) 0px 2px 4px,
+                rgba(255, 255, 255, 0.3) 0px 7px 13px -3px, 
+                rgba(255, 255, 255, 0.2) 0px -3px 0px inset;    
+    padding: 1rem;
+    border-radius: 15px;
+    width: 400px;
+    color: black;
+    text-align: justify;
+}
+
+aside h4{
+    color: var(--secondary-color);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+
+
 
 /********************************************************/
 /*======================RESPONSIVE PHONE================*/
@@ -34,8 +68,17 @@ p{
 /*les paramètres vont s'appliquer au écran max 600px*/
 
 @media screen and (max-width: 600px) {
-    h1{
+    .animated-paragraph{
         font-size: 2rem;
+        padding-top: 3rem;
+    }
+
+    .aside-container{
+        grid-template-columns: 1fr;
+    }
+
+    .aside-content{
+        width: 100%;
     }
 }
 
@@ -43,3 +86,8 @@ p{
 /********************************************************/
 /*==RESPONSIVE MEDIUM/IPAD/TABLETTE ... ================*/
 /********************************************************/
+@media screen and (max-width: 1024px) {
+    .aside-content{
+        width: 100%;
+    }
+}
