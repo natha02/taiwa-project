@@ -28,7 +28,7 @@ const User = ({ id, name, username, email, fetchDelete }) => {
           </ul>
         </div>
         <div className="buttonDelete">
-          <button onClick={userDelete}>Delete</button>
+          <button onClick={userDelete} className="delete-button">Delete</button>
         </div>
       </div>
     </div>

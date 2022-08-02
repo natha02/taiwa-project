@@ -16,13 +16,14 @@ style du titre ADD USER
 j'ai centré le text sur le centre avec text-align center
 */
 .add-user h3{
-    color: var(--color-white);
     text-transform: uppercase;
     font-size: 3rem;
     color: var(--primary-color);
     text-align: center;
     margin-bottom: 1rem;
     font-weight: 700;
+    text-shadow: 2px 8px 6px rgba(0,0,0,0.2),
+                 0px -5px 35px rgba(255,255,255,0.3);
 }
 
 .instructions-container{
@@ -104,7 +105,7 @@ form{
 
 .add-button:before {
     content: '';
-    background: linear-gradient(45deg, var(--color-white), var(--primary-color), var(--secondary-color));
+    background: linear-gradient(45deg, var(--color-white), var(--primary-color));
     position: absolute;
     top: -2px;
     left:-2px;

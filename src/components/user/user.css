@@ -14,10 +14,13 @@
 .title{
     font-size: 3rem;
     text-transform: uppercase;
-    color: var(--secondary-color);
+    color: rgba(236, 179, 101, 0.6);
     padding: 6rem 0 3rem 0;
     text-align: center;
     margin: 0;
+    font-weight: 700;
+    text-shadow: 2px 8px 6px rgba(0,0,0,0.2),
+                 0px -5px 35px rgba(255,255,255,0.3);
 }
 
 /*style du liste
@@ -43,6 +46,7 @@
     justify-content: center;
     margin: 0;
     color: var(--color-white);
+    font-weight: 700;
 }
 
 .liste{
@@ -50,34 +54,74 @@
 }
 
 
-/*container du button delete
-    que j'ai centré au milieu du block
-*/
+/*delete-button style , même que celui du add mais juste la couleur qui vas changer*/
+.delete-button {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: var(--secondary-color);
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.delete-button:before {
+    content: '';
+    background: linear-gradient(45deg, var(--color-white), var(--secondary-color));
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.delete-button:active {
+    color: var(--secondary-color)
+}
+
+.delete-button:active:after {
+    background: transparent;
+}
+
+.delete-button:hover:before {
+    opacity: 1;
+}
+
+.delete-button:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--secondary-color);
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+/*centrer le boutton delete*/
+
 .buttonDelete{
-    font-size: 1rem;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
-
-/*style du button delete*/
-.buttonDelete button{
-    background-color: var(--secondary-color);
-    text-transform: uppercase;
-    font-size: 1rem;
-    transition: ease-in-out 0.2s;
-    color: var(--primary-color);
-}
-
-/*
-style du button delete hover
-*/
-.buttonDelete button:hover{
-    background-color: var(--color-white);
-    color: var(--primary-color);
-    border: 2px solid var(--secondary-color);
-}
-
 
 /********************************************************/
 /*======================RESPONSIVE PHONE================*/
